@@ -1,0 +1,21 @@
+bin/
+obj/
+*.user
+
+# Node
+node_modules/
+dist/
+
+# 含機密或本機設定的環境檔
+.env
+.env.local
+.env.*.local
+
+# 本機資料庫檔案
+*.db
+*.db-shm
+*.db-wal
+
+# 編輯器設定
+.vscode/
+.vs/

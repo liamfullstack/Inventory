@@ -1,0 +1,32 @@
+@backend_HostAddress = http://localhost:5155
+
+GET {{backend_HostAddress}}/openapi/v1.json
+Accept: application/json
+
+###
+
+GET {{backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+GET {{backend_HostAddress}}/api/products
+
+###
+GET {{backend_HostAddress}}/api/products?status=LowStock
+
+###
+GET {{backend_HostAddress}}/api/products/summary
+
+###
+POST {{backend_HostAddress}}/api/products
+Content-Type: application/json
+
+{ "code": "IT-003", "name": "滑鼠", "category": "電腦周邊", "price": 590, "stock": 30 }
+
+###
+POST {{backend_HostAddress}}/api/products
+Content-Type: application/json
+
+{ "code": "IT-001", "name": "重複編號測試", "category": "電腦周邊", "price": 100, "stock": 1 }
+
+預期結果:
